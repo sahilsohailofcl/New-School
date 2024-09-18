@@ -1,5 +1,5 @@
 .main {
-    height: 800px;
+    height: 1000px;
     width: 100%;
   }
   
@@ -190,7 +190,7 @@
     align-items: center;
     margin-right: 40px;
     gap: 1rem;
-    margin-top: -40%;
+    margin-top: -31%;
   }
   
   .grid-2-image-1 {
@@ -214,7 +214,7 @@
     align-items: center;
     gap: 1rem;
     z-index: 1;
-    margin-top: -4%;
+    top: 0;
   }
   
   .grid-3-image-1 {
@@ -237,7 +237,7 @@
     width: 40px;
     background-color: #5CBB5F;
     border-radius: 50%;
-    bottom: 60px;
+    bottom: 200px;
     right: 96px;
     z-index: 1;
   }
