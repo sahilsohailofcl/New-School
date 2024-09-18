@@ -28,7 +28,20 @@
     top: 100px;
     left: 40px;
     z-index: 1;
-  }
+    animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
   
   .gradient-3 {
     position: absolute;
@@ -116,6 +129,7 @@
   
   .hero-CTA-2:hover {
     background-color: #2A77EA;
+    transition: background-color 0.4s ease;
   }
   
   .hero-CTA-2-txt {
@@ -145,7 +159,20 @@
     border-radius: 50%;
     top: 590px;
     right: 790px;
+    animation: bounce 1.6s infinite;
   }
+
+  @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
   
   .hero-grid-1 {
     position: relative;
@@ -155,7 +182,20 @@
     align-items: center;
     margin-right: 40px;
     gap: 1rem;
+    animation: bounce 1.6s infinite;
   }
+
+  @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }  
   
   .grid-1-image-1 {
     height: 600px;
@@ -180,7 +220,20 @@
     top: -2%;
     right: 580px;
     z-index: 1;
+    animation: bounce 1.6s infinite;
   }
+
+  @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
   
   .hero-grid-2 {
     position: relative;
@@ -215,7 +268,21 @@
     gap: 1rem;
     z-index: 1;
     top: 0;
+    animation: bounce 1.6s infinite;
+
   }
+
+  @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  } 
   
   .grid-3-image-1 {
     height: 540px;
@@ -240,7 +307,21 @@
     bottom: 200px;
     right: 96px;
     z-index: 1;
+    animation: bounce 1.6s infinite;
   }
+
+
+  @keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
   
   .cat-section {
     height: 20%;
