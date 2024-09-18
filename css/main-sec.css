@@ -181,7 +181,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 40px;
-    animation: bounce 1.6s infinite;
+    animation: bounce 2s infinite;
   }
 
   @keyframes bounce {
@@ -284,7 +284,7 @@
     align-items: center;
     z-index: 1;
     right: -100px;
-    animation: bounce 1.6s infinite;
+    animation: bounce 2s infinite;
 
   }
 
