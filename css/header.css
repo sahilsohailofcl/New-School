@@ -9,31 +9,7 @@
     width: 100%;
     background-color: #1A171E;  
     
-  }
-  
-  .gradient-1 {
-    position: absolute;
-    background-color: #766191;
-    filter: blur(530px);
-    height: 400px;
-    width: 400px;
-    opacity: 100%;
-    left: -200px;
-    top: -100px;
-    z-index: 1;
-  }
-  
-  .gradient-2 {
-    position: absolute;
-    background-color: #766191;
-    filter: blur(530px);
-    height: 400px;
-    width: 400px;
-    opacity: 100%;
-    right: -200px;
-    top: 0;
-    z-index: 1;
-  }
+  }    
   
   .header-container {
     height: 100%;
