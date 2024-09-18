@@ -287,10 +287,10 @@
   position: absolute;
   background-color: #62BF64;
   filter: blur(530px);
-  height: 300px;
-  width: 300px;
+  height: 320px;
+  width: 320px;
   opacity: 10%;
   right: 0;
-  bottom: -320px;
+  bottom: 54px;
 }  
 
