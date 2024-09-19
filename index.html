@@ -5,7 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css">
-    <script type="module" src="/main.js"></script>
     <title>New School</title>
   </head>
   <body>
@@ -91,28 +90,9 @@
         </div>
       </section>
     </main>
+    
     <div class="gradient-3"></div>
-    <script>
-      window.addEventListener('scroll', function() {
-        const heroGrid = document.querySelector('.hero-grid-1');
-        
-        if (window.scrollY > 100) {
-          heroGrid.classList.add('swapped');
-        } else {
-          heroGrid.classList.remove('swapped');
-        }
-      });
-      
 
-      window.addEventListener('scroll', function() {
-        const heroGrid = document.querySelector('.hero-grid-3');
-        
-        if (window.scrollY > 100) {
-          heroGrid.classList.add('swapped');
-        } else {
-          heroGrid.classList.remove('swapped');
-        }
-      });
-    </script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
