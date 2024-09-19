@@ -185,12 +185,12 @@ body {
 
 
   .main {
-    height: 1000px;
+    height: auto;
     width: 100%;
   }
   
   .hero-section {
-    height: 80%;
+    height: 800px;
     width: 100%;
     position: relative;
     background-color: #1A171E;
@@ -527,7 +527,7 @@ body {
 }
   
   .cat-section {
-    height: 20%;
+    height: 200px;
     width: 100%;
     background-color: #1A171E;
   }
@@ -538,9 +538,10 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: start;
     align-items: start;
     margin: 0 80px;
-    gap: 1rem;
+    gap: 1.6rem;
   }
   
   .cat {
@@ -555,7 +556,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
   }
   
   .cat-bar-items {
@@ -565,3 +566,407 @@ body {
     font-family: "Popins", sans-serif;
     opacity: 50%;
   }
+
+
+  .about-section {
+    width: 100%;
+    background-color: #fff; /* Added background color for contrast */
+    padding: 60px 0; /* Added padding for top and bottom space */
+}
+
+.about-section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    position: relative; /* To allow absolute positioning for the vector */
+    gap: 2rem; /* Increase gap for better spacing */
+}
+
+.about-heading {
+    font-size: 48px; /* Reduced font size for better readability */
+    color: #000;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif; /* Corrected the font family */
+    position: relative;
+    z-index: 1; /* Ensures the heading is above the vector */
+}
+
+.about-vector-1 {
+    position: absolute;
+    height: 30px;
+    width: auto;
+    z-index: 0; /* Vector should be behind the heading */
+    fill: none; /* Keep it transparent, stroke is defined */
+}
+
+.about-para {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    max-width: 900px; /* Limit the width for better readability */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    background-color: #E4B821;
+    color: #fff;
+    border-radius: 50px;    
+    transition: background-color 0.3s ease, transform 0.3s ease;    
+}
+
+.about-btn:hover {
+    background-color: #d3a720; /* Add a hover effect */
+    transform: scale(1.05);
+}
+
+.about-btn-txt {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.academy-section {
+    position: relative;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 40px 0; /* Added padding for spacing */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.academy-stars-1 {
+    position: absolute;
+    height: 26px;
+    width: auto;
+    top: 40px;
+    left: 40px;
+    animation: bounce 1.6s infinite;
+}
+
+.academy-stars-2 {
+    position: absolute;
+    height: 26px;
+    width: auto;
+    bottom: 120px;
+    left: 80px;
+    animation: bounce 1.6s infinite;
+}
+
+.academy-stars-3 {
+    position: absolute;
+    height: 26px;
+    width: auto;
+    top: 60px;
+    right: 40px;
+    animation: bounce 1.6s infinite;
+}
+
+.academy-stars-4 {
+    position: absolute;
+    height: 26px;
+    width: auto;
+    bottom: 80px;
+    right: 80px;
+    animation: bounce 1.6s infinite;
+}
+
+
+.academy-section-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Two subjects per row */
+    gap: 2rem; /* Space between each subject */
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.academy-subjects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 20px;
+    text-align: center;
+    gap: 1rem; /* Control the spacing between elements */
+    background-color: #fff;
+}
+
+.subjects-img {
+    height: 60px;
+    width: 60px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.subjects-heading {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+
+.subjects-info {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.subjects-btn {
+    height: 60px;
+    width: 160px;
+    background-color: #E4B821;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-top: auto; /* Ensures the button stays at the bottom */
+}
+
+.subjects-btn:hover {
+    background-color: #d3a720; /* Add a hover effect */
+}
+
+.subjects-btn-txt {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+/* General styles for contact section */
+.contact-section {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.contact-section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Added to handle responsiveness */
+    gap: 2rem;
+}
+
+/* Contact info */
+.contact-info {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contact-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+}
+
+.contact-para {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+}
+
+/* Contact form styling */
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contact-form-nm,
+.contact-form-em,
+.contact-form-msg {
+    background-color: #EC4A59;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-nm::placeholder,
+.contact-form-em::placeholder,
+.contact-form-msg::placeholder {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.contact-form-msg {
+    height: 150px; /* Adjusted for better readability */
+    resize: none;
+}
+
+/* Submit button */
+.contact-form-btn {
+    background-color: #E4B821;
+    color: #fff;
+    height: 60px;
+    width: 200px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.contact-form-btn:hover {
+    background-color: #d3a720;
+    transform: scale(1.05); /* Added scale effect on hover */
+}
+
+.contact-form-btn-txt {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+
+/* Footer__Section */
+
+.footer {
+    position: relative;
+    height: 160px;
+    width: 100%;
+    background-color: #1A171E;
+    color: #fff;
+    overflow: hidden;
+}
+
+.footer-menu {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.footer-logo {
+    font-size: 36px;
+    font-weight: 600;
+    font-family: "Popins", sans-serif;
+    color: #fff;
+    z-index: 1;
+}
+
+.footer-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1;
+
+}
+
+.footer-bar-items {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Popins",sans-serif;
+    color: #fff;
+    z-index: 1;
+}
+
+.footer-copyright {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.6px solid #fff;
+    opacity: 70%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.footer-copyright-txt {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Popins", sans-serif;
+    color: #fff;
+    z-index: 1;
+}
+
+
+.gradient-4 {
+    position: absolute;
+    background-color: #766191;
+    filter: blur(300px);
+    height: 200px;
+    width: 200px;
+    opacity: 100%;
+    z-index: 1;
+    left: -120px;
+    top: -120px;
+}
+
+.gradient-5 {
+    position: absolute;
+    background-color: #766191;
+    filter: blur(300px);
+    height: 200px;
+    width: 200px;
+    opacity: 100%;
+    z-index: 1;
+    right: -120px;
+    bottom: -120px;
+}
