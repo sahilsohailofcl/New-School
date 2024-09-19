@@ -1,4 +1,9 @@
+/* Variables */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* Reset-Properties */
 
 
 * {
@@ -18,10 +23,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Gradients */
+
 .gradient-1 {
     position: absolute;
     background-color: #766191;
-    filter: blur(530px);
+    filter: blur(300px);
     height: 400px;
     width: 400px;
     opacity: 100%;
@@ -29,30 +36,32 @@ body {
     left: -200px;
     top: -100px;
     animation: moveLeftGradient 20s infinite alternate ease-in-out;
-  }
-  
-  @keyframes moveLeftGradient {
+    will-change: transform;
+    transform: translate(0, 0);
+}
+
+@keyframes moveLeftGradient {
     0% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
     25% {
-      transform: translate(-200px, 150px); /* Move left and down */
+        transform: translate(-200px, 150px);
     }
     50% {
-      transform: translate(200px, -200px); /* Move right and up */
+        transform: translate(200px, -200px);
     }
     75% {
-      transform: translate(-150px, 200px); /* Move left and down */
+        transform: translate(-150px, 200px);
     }
     100% {
-      transform: translate(100px, -100px); /* Move right and up */
+        transform: translate(100px, -100px);
     }
-  }
-  
-  .gradient-2 {
+}
+
+.gradient-2 {
     position: absolute;
     background-color: #766191;
-    filter: blur(530px);
+    filter: blur(300px);
     height: 400px;
     width: 400px;
     opacity: 100%;
@@ -60,25 +69,42 @@ body {
     right: -200px;
     top: 0;
     animation: moveRightGradient 20s infinite alternate ease-in-out;
-  }
-  
-  @keyframes moveRightGradient {
+    will-change: transform;
+    transform: translate(0, 0);
+}
+
+@keyframes moveRightGradient {
     0% {
-      transform: translate(0, 0);
+        transform: translate(0, 0);
     }
     25% {
-      transform: translate(150px, -150px); /* Move right and up */
+        transform: translate(150px, -150px);
     }
     50% {
-      transform: translate(-200px, 200px); /* Move left and down */
+        transform: translate(-200px, 200px);
     }
     75% {
-      transform: translate(200px, -100px); /* Move right and up */
+        transform: translate(200px, -100px);
     }
     100% {
-      transform: translate(-150px, 200px); /* Move left and down */
+        transform: translate(-150px, 200px);
     }
-  }
+}
+
+.gradient-3 {
+    position: absolute;
+    background-color: #62BF64;
+    filter: blur(300px);
+    height: 320px;
+    width: 320px;
+    opacity: 10%;
+    right: 0;
+    bottom: 54px;
+    will-change: transform;
+}
+
+
+/* Header__Section */
 
 
   .header{
@@ -155,6 +181,9 @@ body {
   }
 
 
+/* Main__Section */
+
+
   .main {
     height: 1000px;
     width: 100%;
@@ -199,17 +228,6 @@ body {
         transform: translateY(0);
     }
 }
-  
-  .gradient-3 {
-    position: absolute;
-    background-color: #62BF64;
-    filter: blur(530px);
-    height: 200px;
-    width: 200px;
-    opacity: 10%;
-    right: 0;
-    bottom: 0;
-  }
   
   .hero-right {
     position: relative;
@@ -547,16 +565,3 @@ body {
     font-family: "Popins", sans-serif;
     opacity: 50%;
   }
-  
-
-.gradient-3 {
-  position: absolute;
-  background-color: #62BF64;
-  filter: blur(530px);
-  height: 320px;
-  width: 320px;
-  opacity: 10%;
-  right: 0;
-  bottom: 54px;
-}  
-

@@ -1,20 +1,12 @@
 window.addEventListener('scroll', function() {
-    const heroGrid = document.querySelector('.hero-grid-1');
-    
-    if (window.scrollY > 100) {
-      heroGrid.classList.add('swapped');
-    } else {
-      heroGrid.classList.remove('swapped');
-    }
-  });
+    const heroGrid1 = document.querySelector('.hero-grid-1');
+    const heroGrid3 = document.querySelector('.hero-grid-3');
   
-
-window.addEventListener('scroll', function() {
-    const heroGrid = document.querySelector('.hero-grid-3');
-    
     if (window.scrollY > 100) {
-      heroGrid.classList.add('swapped');
+      heroGrid1.classList.add('swapped');
+      heroGrid3.classList.add('swapped');
     } else {
-      heroGrid.classList.remove('swapped');
+      heroGrid1.classList.remove('swapped');
+      heroGrid3.classList.remove('swapped');
     }
   });
