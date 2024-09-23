@@ -1,3 +1,13 @@
+const headerMenu = document.getElementById('header-menu');
+const headerNav = document.getElementById('header-nav');
+
+headerMenu.addEventListener('click', function() {
+  if (window.innerWidth <= 768) {
+    headerNav.classList.toggle('active');
+  }
+});
+
+
 window.addEventListener('scroll', function() {
     const heroGrid1 = document.querySelector('.hero-grid-1');
     const heroGrid3 = document.querySelector('.hero-grid-3');
@@ -10,3 +20,4 @@ window.addEventListener('scroll', function() {
       heroGrid3.classList.remove('swapped');
     }
   });
+ 
