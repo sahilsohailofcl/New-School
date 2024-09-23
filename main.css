@@ -16,11 +16,13 @@
     text-decoration: none;
     text-transform: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
   
 body {
     background-color: #fff;
     overflow-x: hidden;
+    position: relative;
 }
 
 /* Gradients */
@@ -59,48 +61,110 @@ body {
 }
 
 .gradient-2 {
-    position: absolute;
-    background-color: #766191;
-    filter: blur(300px);
-    height: 400px;
-    width: 400px;
-    opacity: 100%;
-    z-index: 1;
-    right: -200px;
-    top: 0;
-    animation: moveRightGradient 20s infinite alternate ease-in-out;
-    will-change: transform;
-    transform: translate(0, 0);
+  position: absolute;
+  background-color: #766191;
+  filter: blur(300px);
+  height: 400px;
+  width: 400px;
+  opacity: 100%;
+  z-index: 1;
+  right: -200px;
+  top: 0;
+  animation: moveRightGradient 20s infinite alternate ease-in-out;
+  will-change: transform;
+  transform: translate(0, 0);
 }
 
 @keyframes moveRightGradient {
-    0% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(150px, -150px);
-    }
-    50% {
-        transform: translate(-200px, 200px);
-    }
-    75% {
-        transform: translate(200px, -100px);
-    }
-    100% {
-        transform: translate(-150px, 200px);
-    }
+  0% {
+      transform: translate(0, 0);
+  }
+  25% {
+      transform: translate(150px, -50px);
+  }
+  50% {
+      transform: translate(-200px, 100px);
+  }
+  75% {
+      transform: translate(200px, -50px);
+  }
+  100% {
+      transform: translate(-150px, 100px)
+  }
 }
 
+
 .gradient-3 {
-    position: absolute;
-    background-color: #62BF64;
-    filter: blur(300px);
-    height: 320px;
-    width: 320px;
-    opacity: 10%;
-    right: 0;
-    bottom: 54px;
-    will-change: transform;
+  position: absolute;
+  background-color: #62BF64;
+  filter: blur(300px);
+  height: 320px;
+  width: 320px;
+  opacity: 10%;
+  right: 0;
+  bottom: 54px;
+  will-change: transform;
+}
+
+.gradient-4 {
+  position: absolute;
+  background-color: #766191;
+  filter: blur(300px);
+  height: 100px;
+  width: 100px;
+  opacity: 100%;
+  z-index: 1;
+  left: 0;
+  bottom: -80px;
+}
+
+.gradient-5 {
+  position: absolute;
+  background-color: #766191;
+  filter: blur(300px);
+  height: 100px;
+  width: 100px;
+  opacity: 100%;
+  z-index: 1;
+  right: 0;
+  bottom: -80px;
+}
+
+.gradient-6 {
+  position: absolute;
+  background-color: #766191;
+  filter: blur(300px);
+  height: 400px;
+  width: 400px;
+  opacity: 100%;
+  z-index: 1;
+  right: -360px;
+  top: 200px;
+}
+
+.gradient-7 {
+  position: absolute;
+  background-color: #766191;
+  filter: blur(300px);
+  height: 400px;
+  width: 400px;
+  opacity: 100%;
+  z-index: 1;
+  left: -360px;
+  top: 200px;
+}
+
+.gradient-8 {
+  position: absolute;
+  background-color: #d3a720;
+  filter: blur(300px);
+  height: 200px;
+  width: 200px;
+  opacity: 100%;
+  z-index: 1;
+  top: 180px;
+  left: 140px;
+
 }
 
 
@@ -114,7 +178,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: relative;
     width: 100%;
     background-color: #1A171E;  
     
@@ -568,46 +631,94 @@ body {
   }
 
 
-  .about-section {
-    width: 100%;
-    background-color: #fff; /* Added background color for contrast */
-    padding: 60px 0; /* Added padding for top and bottom space */
+.about-section {
+  height: 600px;
+  width: 100%;
+  background-color: #1A171E;
+  padding: 40px 0;
+  border-top: 0.6px solid #f8f8f8;
 }
 
 .about-section-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
-    position: relative; /* To allow absolute positioning for the vector */
-    gap: 2rem; /* Increase gap for better spacing */
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-img {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.about-img-pic {
+  height: 520px;
+  width: auto;
+  animation: bounce 2s infinite;
+  z-index: 1;
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+.about-info {
+  display: flex;
+  justify-content: end;
+  width: 50%;
+  height: 100%;
+
+}
+
+.about-info-container {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 20px;
 }
 
 .about-heading {
-    font-size: 48px; /* Reduced font size for better readability */
-    color: #000;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif; /* Corrected the font family */
-    position: relative;
-    z-index: 1; /* Ensures the heading is above the vector */
+  font-size: 48px;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .about-vector-1 {
     position: absolute;
     height: 30px;
     width: auto;
-    z-index: 0; /* Vector should be behind the heading */
-    fill: none; /* Keep it transparent, stroke is defined */
+    z-index: 0;
+    fill: none;
 }
 
 .about-para {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    color: #000;
+    color: #fff;
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
     max-width: 900px; /* Limit the width for better readability */
@@ -641,10 +752,12 @@ body {
 
 
 .academy-section {
-    position: relative;
-    width: 100%;
-    background-color: #f8f8f8;
-    padding: 40px 0; /* Added padding for spacing */
+  height: 800px;
+  width: 100%;
+  background-color: #1A171E;
+  position: relative;
+  padding: 40px 0;
+  border-top: 0.8px solid #f8f8f8;
 }
 
 @keyframes bounce {
@@ -665,6 +778,7 @@ body {
     width: auto;
     top: 40px;
     left: 40px;
+    fill: #fff;
     animation: bounce 1.6s infinite;
 }
 
@@ -674,6 +788,7 @@ body {
     width: auto;
     bottom: 120px;
     left: 80px;
+    fill: #fff;
     animation: bounce 1.6s infinite;
 }
 
@@ -683,6 +798,7 @@ body {
     width: auto;
     top: 60px;
     right: 40px;
+    fill: #fff;
     animation: bounce 1.6s infinite;
 }
 
@@ -692,37 +808,41 @@ body {
     width: auto;
     bottom: 80px;
     right: 80px;
+    fill: #fff;
     animation: bounce 1.6s infinite;
 }
 
 
 .academy-section-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Two subjects per row */
-    gap: 2rem; /* Space between each subject */
-    max-width: 1480px;
-    margin: 0 auto;
-    padding: 0 20px;
+  height: 100%;
+  width: 100%;
+  max-width: 1480px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .academy-subjects {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    border: 1px solid #000;
-    border-radius: 50px;
-    padding: 20px;
-    text-align: center;
-    gap: 1rem; /* Control the spacing between elements */
-    background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+  padding: 20px;
+  text-align: center;
+  gap: 1rem;
+  border: 0.8px solid #fff;
+  border-radius: 40px;
 }
 
 .subjects-img {
-    height: 60px;
-    width: 60px;
-    animation: bounce 2s infinite;
+  height: 60px;
+  width: 60px;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
@@ -738,61 +858,66 @@ body {
 }
 
 .subjects-heading {
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    color: #000;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
 }
 
 .subjects-info {
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    color: #000;
-    text-align: center;
-    line-height: 1.5;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
 }
 
 .subjects-btn {
-    height: 60px;
-    width: 160px;
-    background-color: #E4B821;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    margin-top: auto; /* Ensures the button stays at the bottom */
+  height: 60px;
+  width: 160px;
+  background-color: #E4B821;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: auto;
 }
 
 .subjects-btn:hover {
-    background-color: #d3a720; /* Add a hover effect */
+  background-color: #d3a720;
 }
 
 .subjects-btn-txt {
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    color: #fff;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
 }
 
 
 /* General styles for contact section */
 .contact-section {
-    width: 100%;
-    background-color: #fff;
-    padding: 40px 20px;
+  height: 600px;
+  width: 100%;
+  background-color: #1A171E;
+  border-top: 0.8px solid #f8f8f8;
+  padding: 40px 0;
 }
 
 .contact-section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Added to handle responsiveness */
-    gap: 2rem;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding:  0 20px;
+  gap: 2rem;
 }
 
 /* Contact info */
@@ -804,12 +929,12 @@ body {
 .contact-heading {
     font-size: 28px;
     font-weight: 700;
-    color: #000;
+    color: #fff;
     font-family: "Poppins", sans-serif;
 }
 
 .contact-para {
-    color: #333;
+    color: #fff;
     font-size: 18px;
     font-weight: 400;
     font-family: "Poppins", sans-serif;
@@ -878,12 +1003,12 @@ body {
 /* Footer__Section */
 
 .footer {
-    position: relative;
-    height: 160px;
-    width: 100%;
-    background-color: #1A171E;
-    color: #fff;
-    overflow: hidden;
+  position: relative;
+  height: 160px;
+  width: 100%;
+  background-color: #1A171E;
+  color: #fff;
+  overflow: hidden;
 }
 
 .footer-menu {
@@ -944,29 +1069,4 @@ body {
     font-family: "Popins", sans-serif;
     color: #fff;
     z-index: 1;
-}
-
-
-.gradient-4 {
-    position: absolute;
-    background-color: #766191;
-    filter: blur(300px);
-    height: 200px;
-    width: 200px;
-    opacity: 100%;
-    z-index: 1;
-    left: -120px;
-    top: -120px;
-}
-
-.gradient-5 {
-    position: absolute;
-    background-color: #766191;
-    filter: blur(300px);
-    height: 200px;
-    width: 200px;
-    opacity: 100%;
-    z-index: 1;
-    right: -120px;
-    bottom: -120px;
 }
