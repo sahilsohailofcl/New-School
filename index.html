@@ -327,7 +327,7 @@
 
         </svg>
 
-        <svg class="academy-stars-3"viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+        <svg class="academy-stars-3" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
           
           <g clip-path="url(#clip0_1211_3860)">
 
@@ -502,22 +502,23 @@
             
               </div>
     
-            <div class="contact-form">
-            
-              <input class="contact-form-nm" type="text" name="name" placeholder="Full Name">
-  
-              <input class="contact-form-em" type="email" name="email" placeholder="Email Address">
-        
-              <textarea class="contact-form-msg" name="message" rows="5" placeholder="Message"></textarea>
-        
-              <a class="contact-form-btn" type="submit">
+
+            <form action="http://localhost:5173/submit-form" method="POST" class="contact-form">
               
+              <input class="contact-form-nm" type="text" name="full_name" placeholder="Full Name" required>
+              
+              <input class="contact-form-em" type="email" name="email" placeholder="Email Address" required>
+              
+              <textarea class="contact-form-msg" name="message" rows="5" placeholder="Message" required></textarea>
+              
+              <button class="contact-form-btn" type="submit">
+                
                 <span class="contact-form-btn-txt">Send Message</span>
-  
-              </a>
+              
+              </button>
             
-            </div>
-    
+            </form>
+                
         </div>
     
       </section>    

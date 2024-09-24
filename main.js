@@ -1,3 +1,6 @@
+import './backend/server';
+import './backend/.env';
+
 const headerMenu = document.getElementById('header-menu');
 const headerNav = document.getElementById('header-nav');
 
