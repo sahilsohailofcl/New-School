@@ -38,10 +38,10 @@ app.post('/submit-form', async (req, res) => {
     });
 
     try {
-        await newCustomer.save();  // Await the save method
-        res.send('Form submitted successfully!');
+        await newCustomer.save();
+        console.log('Form submitted successfully!');
     } catch (err) {
-        res.send('Error saving data');
+        console.log('Error saving data');
     }
 });
 
