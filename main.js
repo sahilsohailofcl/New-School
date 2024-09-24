@@ -1,4 +1,4 @@
-import './backend/server';
+import './backend/server.js';
 import './backend/.env';
 
 const headerMenu = document.getElementById('header-menu');
