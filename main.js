@@ -7,19 +7,19 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const data = Object.fromEntries(formData.entries()); 
 
     try {
-        const response = await fetch('https://newschool-mocha.vercel.app/submit-form', {
+        const response = await fetch('http://localhost:3000/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json' // Set content type to JSON
             },
             body: JSON.stringify(data) // Convert form data to JSON
-        });        
+        });
 
         const confirmationMessage = document.getElementById('confirmation-message');
 
         if (response.ok) {
-            const result = await response.json(); // Parse the JSON response
-            confirmationMessage.innerText = result.message; // Show success message
+            const result = await response.json();
+            confirmationMessage.innerText = result.message;
             confirmationMessage.style.display = 'block';
             this.reset(); // Reset the form fields
         } else {
