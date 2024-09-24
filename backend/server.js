@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); // To parse JSON bodies
 
 // Log the MongoDB URI to verify it's being read correctly
 console.log('MongoDB URI:', process.env.MONGODB_URI);
@@ -25,9 +26,7 @@ const customerSchema = new mongoose.Schema({
 
 const Customer = mongoose.model('Customer', customerSchema);
 
-
 // Route to handle form submissions
-
 app.post('/submit-form', async (req, res) => {
     const { full_name, email, message } = req.body;
 
@@ -39,12 +38,11 @@ app.post('/submit-form', async (req, res) => {
 
     try {
         await newCustomer.save();
-        console.log('Form submitted successfully!');
+        res.send('Form submitted successfully!');
     } catch (err) {
-        console.log('Error saving data');
+        res.status(500).send('Error saving data');
     }
 });
-
 
 app.listen(3000, () => {
     console.log('Server started on port 3000');

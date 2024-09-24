@@ -503,21 +503,15 @@
               </div>
     
 
-            <form action="http://localhost:3000/submit-form" method="POST" class="contact-form">
-              
-              <input class="contact-form-nm" type="text" name="full_name" placeholder="Full Name" required>
-              
-              <input class="contact-form-em" type="email" name="email" placeholder="Email Address" required>
-              
-              <textarea class="contact-form-msg" name="message" rows="5" placeholder="Message" required></textarea>
-              
-              <button class="contact-form-btn" type="submit">
-                
-                <span class="contact-form-btn-txt">Send Message</span>
-              
-              </button>
-            
+              <form id="contact-form" class="contact-form">
+                <input class="contact-form-nm" type="text" name="full_name" placeholder="Full Name" required>
+                <input class="contact-form-em" type="email" name="email" placeholder="Email Address" required>
+                <textarea class="contact-form-msg" name="message" rows="5" placeholder="Message" required></textarea>
+                <button class="contact-form-btn" type="submit">
+                    <span class="contact-form-btn-txt">Send Message</span>
+                </button>
             </form>
+            <div id="confirmation-message" style="display: none;"></div>            
                 
         </div>
     

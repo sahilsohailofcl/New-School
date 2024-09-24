@@ -29,4 +29,32 @@ window.addEventListener('scroll', function() {
   }
 });
 
- 
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData);
+
+  try {
+      const response = await fetch('http://localhost:3000/submit-form', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+          const confirmationMessage = document.getElementById('confirmation-message');
+          confirmationMessage.innerText = 'Form submitted successfully!';
+          confirmationMessage.style.display = 'block';
+          this.reset(); // Optional: Reset the form fields
+      } else {
+          throw new Error('Error submitting form');
+      }
+  } catch (error) {
+      const confirmationMessage = document.getElementById('confirmation-message');
+      confirmationMessage.innerText = 'Error saving data';
+      confirmationMessage.style.display = 'block';
+  }
+});
