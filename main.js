@@ -1,5 +1,37 @@
-import './backend/server.js';
-import './backend/.env';
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const formData = new FormData(this); // Get form data
+
+    // Convert FormData to a regular object
+    const data = Object.fromEntries(formData.entries()); 
+
+    try {
+        const response = await fetch('http://localhost:3000/submit-form', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' // Set content type to JSON
+            },
+            body: JSON.stringify(data) // Convert form data to JSON
+        });
+
+        const confirmationMessage = document.getElementById('confirmation-message');
+
+        if (response.ok) {
+            const result = await response.json(); // Parse the JSON response
+            confirmationMessage.innerText = result.message; // Show success message
+            confirmationMessage.style.display = 'block';
+            this.reset(); // Reset the form fields
+        } else {
+            throw new Error('Error submitting form');
+        }
+    } catch (error) {
+        const confirmationMessage = document.getElementById('confirmation-message');
+        confirmationMessage.innerText = 'Error submitting form'; // Show error message
+        confirmationMessage.style.display = 'block';
+    }
+});
+  
 
 const headerMenu = document.getElementById('header-menu');
 const headerNav = document.getElementById('header-nav');
@@ -26,35 +58,5 @@ window.addEventListener('scroll', function() {
   } else {
       heroGrid1.classList.remove('swapped');
       heroGrid3.classList.remove('swapped');
-  }
-});
-
-document.getElementById('contact-form').addEventListener('submit', async function(event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  const formData = new FormData(this);
-  const data = Object.fromEntries(formData);
-
-  try {
-      const response = await fetch('http://localhost:3000/submit-form', {
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-      });
-
-      if (response.ok) {
-          const confirmationMessage = document.getElementById('confirmation-message');
-          confirmationMessage.innerText = 'Form submitted successfully!';
-          confirmationMessage.style.display = 'block';
-          this.reset(); // Optional: Reset the form fields
-      } else {
-          throw new Error('Error submitting form');
-      }
-  } catch (error) {
-      const confirmationMessage = document.getElementById('confirmation-message');
-      confirmationMessage.innerText = 'Error saving data';
-      confirmationMessage.style.display = 'block';
   }
 });
