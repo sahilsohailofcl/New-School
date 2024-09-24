@@ -13,7 +13,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
                 'Content-Type': 'application/json' // Set content type to JSON
             },
             body: JSON.stringify(data) // Convert form data to JSON
-        });
+        });        
 
         const confirmationMessage = document.getElementById('confirmation-message');
 
