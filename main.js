@@ -7,7 +7,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const data = Object.fromEntries(formData.entries()); 
 
     try {
-        const response = await fetch('http://localhost:3000/submit-form', {
+        const response = await fetch('http://newschool-mocha.vercel.app/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json' // Set content type to JSON
