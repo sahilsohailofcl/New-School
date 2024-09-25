@@ -7,7 +7,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const data = Object.fromEntries(formData.entries()); 
 
     try {
-        const response = await fetch('https://newschool-pro.vercel.app/submit-form', {
+        const response = await fetch('https://newschool-pro.vercel.app/api/(.*)', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
