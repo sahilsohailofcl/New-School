@@ -7,13 +7,13 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     const data = Object.fromEntries(formData.entries()); 
 
     try {
-        const response = await fetch('/submit-form', {
+        const response = await fetch('https://your-vercel-deployment-url.vercel.app/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-        });        
+        });               
 
         const confirmationMessage = document.getElementById('confirmation-message');
 
