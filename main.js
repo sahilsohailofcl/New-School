@@ -1,19 +1,17 @@
 document.getElementById('contact-form').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
     const formData = new FormData(this); // Get form data
-
-    // Convert FormData to a regular object
     const data = Object.fromEntries(formData.entries()); 
 
     try {
-        const response = await fetch('https://newschool-pro.vercel.app/api/(.*)', {
+        const response = await fetch('/api/submit-form', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
-        });               
+        });
 
         const confirmationMessage = document.getElementById('confirmation-message');
 
@@ -21,7 +19,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
             const result = await response.json();
             confirmationMessage.innerText = result.message;
             confirmationMessage.style.display = 'block';
-            this.reset(); // Reset the form fields
+            this.reset(); // Reset form fields
         } else {
             throw new Error('Error submitting form');
         }
